@@ -126,19 +126,19 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
 
-  // Name: Move selected line(s) up (in Visual Line mode)
+  // Name: Move selected line(s) up (Visual Line mode)
   {
     "key": "shift-k",
-    "command": "editor
+    "command": "editor.action.moveLinesUpAction",
     "when": "vim.mode == 'VisualLine' && editorTextFocus"
-  }
+  },
 
-  // Name: Move selected line(s) down (in Visual Line mode)
+  // Name: Move selected line(s) down (Visual Line mode)
   {
     "key": "shift-j",
-    "command": "editor
+    "command": "editor.action.moveLinesDownAction",
     "when": "vim.mode == 'VisualLine' && editorTextFocus"
-  }
+  },
 
   // Name: Show Hover (docs/types)  🔁 overrides default vscode Delete Line keybind
   {
@@ -217,14 +217,14 @@
     "args": {
       "commands": ["workbench.view.scm", "workbench.scm.focus"]
     },
-    "when": "vim.m
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
 
   // Name: Add next occurrence to selection (multi-cursor)
   {
     "key": "ctrl-n",
     "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "(vim.
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
 
   // =================
