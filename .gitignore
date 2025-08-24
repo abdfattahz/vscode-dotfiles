@@ -1,6 +1,24 @@
-# Ignore VS Code cache files
-globalStorage/
+# Ignore VS Code cache + storage
 workspaceStorage/
-logs/
+globalStorage/
 history/
 sync/
+logs/
+User/workspaceStorage/
+User/globalStorage/
+
+# Ignore backup & crash data
+*.bak
+*.tmp
+
+# Ignore extension data dumps (huge + machine-specific)
+storage.json
+commandHistory.json
+*.log
+
+# Keep only the important files
+!settings.json
+!keybindings.json
+!tasks.json
+!launch.json
+!snippets/**
