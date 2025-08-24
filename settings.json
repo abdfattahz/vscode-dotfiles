@@ -1,0 +1,95 @@
+{
+  "C_Cpp.default.compilerPath": "C:/mingw64/bin/gcc.exe",
+  "editor.fontFamily": "RobotoMono Nerd Font Mono",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "arduinoMakerWorkshop.arduinoCLI.userDirectory": "C:\\Users\\ACER\\Documents\\Arduino\n\n",
+  "cSpell.userWords": [
+    "COMPA",
+    "SWUART",
+    "TCCR",
+    "TIFR",
+    "TIMSK",
+    "USART",
+    "vect"
+  ],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Web files → Prettier
+  "[javascript]": { "editor.defaulFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[php]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // Python → Black
+  "[python]": { "editor.defaultFormatter": "ms-python.black-formatter" },
+  "black-formatter.args": ["--line-length", "88"],
+
+  // C / C++ → clang-format via MS C++ extension
+  "[c]": { "editor.defaultFormatter": "ms-vscode.cpptools" },
+  "[cpp]": { "editor.defaultFormatter": "ms-vscode.cpptools" },
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+
+  "material-icon-theme.folders.theme": "classic",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.profiles": {
+    "MSYS2 MinGW64": {
+      "path": "C:\\msys64\\mingw64.exe"
+    }
+  },
+  // "terminal.integrated.defaultProfile.windows": "MSYS2 MinGW64",
+  "terminal.integrated.defaultProfile.windows": "UbuntuVM (WSL)",
+  "php.validate.executablePath": "C:/xampp/php/php.exe",
+  "php.debug.executablePath": "C:/xampp/php/php.exe",
+  "continue.enableTabAutocomplete": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.renderWhitespace": "all",
+  "editor.lineNumbers": "relative",
+
+  // vim settings
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "C:/Program Files/Neovim/bin", // adjust for your system
+
+  "vim.lineNumbers": "relative",
+
+  "vim.surround": true,
+
+  "vim.useSystemClipboard": true,
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>", "l"]
+    }
+  ],
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "UbuntuVM (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": ["-d", "UbuntuVM"]
+    }
+  },
+  "editor.mouseWheelZoom": true,
+  "workbench.view.showQuietly": {
+    "workbench.panel.output": false
+  },
+  "window.menuBarVisibility": "compact"
+}
