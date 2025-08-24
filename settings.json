@@ -1,14 +1,14 @@
 {
-  // =========================
+  // ================================
   // 🧰 C/C++ toolchain & formatters
-  // =========================
+  // ================================
   "C_Cpp.default.compilerPath": "C:/mingw64/bin/gcc.exe",
   "C_Cpp.formatting": "clangFormat",
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
 
-  // =========================
+  // ============================
   // 🖋️ Editor look & formatting
-  // =========================
+  // ============================
   "editor.fontFamily": "RobotoMono Nerd Font Mono",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -26,9 +26,9 @@
   "editor.renderWhitespace": "all",
   "editor.lineNumbers": "relative",
 
-  // =========================
+  // ==================
   // 🧩 Themes & icons
-  // =========================
+  // ==================
   "material-icon-theme.folders.theme": "classic",
   "workbench.iconTheme": "material-icon-theme",
 
@@ -43,9 +43,9 @@
   // NOTE: This setting is experimental/obscure; comment if noisy
   // "workbench.view.showQuietly": { "workbench.panel.output": false }, // May not exist in all builds
 
-  // =========================
+  // =====================
   // 🖥️ Terminal profiles
-  // =========================
+  // =====================
   // Old cross-OS profile bucket (can conflict on Windows). Use the Windows-scoped section below.
   // "terminal.integrated.profiles": {
   //   "MSYS2 MinGW64": {
@@ -79,22 +79,22 @@
   // Convenience zoom
   "editor.mouseWheelZoom": true,
 
-  // =========================
+  // ============================
   // 🐘 PHP (validator/debugger)
-  // =========================
+  // ============================
   "php.validate.executablePath": "C:/xampp/php/php.exe",
   // NOTE: Some PHP debug extensions don't use this setting; safe to keep, but remove if warned by your debugger.
   "php.debug.executablePath": "C:/xampp/php/php.exe",
 
-  // =========================
+  // ====================
   // 🔐 Security / Trust
-  // =========================
+  // ====================
   "security.allowedUNCHosts": ["wsl.localhost"],
   "security.workspace.trust.untrustedFiles": "open",
 
-  // =========================
+  // =============================
   // ✍️ Spellchecker custom words
-  // =========================
+  // =============================
   "cSpell.userWords": [
     "COMPA",
     "SWUART",
@@ -105,15 +105,15 @@
     "vect"
   ],
 
-  // =========================
+  // =================
   // 🤖 AI assistants
-  // =========================
+  // =================
   "continue.enableTabAutocomplete": false,
   "github.copilot.nextEditSuggestions.enabled": true,
 
-  // =========================
+  // ======================
   // ⚙️ VSCodeVim / Neovim
-  // =========================
+  // ======================
   "vim.enableNeovim": true,
   // Use the full path to the executable (not the folder)
   "vim.neovimPath": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
