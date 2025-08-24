@@ -1,5 +1,5 @@
 {
-  // ================================
+  // ================================ 
   // 🧰 C/C++ toolchain & formatters
   // ================================
   "C_Cpp.default.compilerPath": "C:/mingw64/bin/gcc.exe",
@@ -132,3 +132,4 @@
   // ============
   "arduinoMakerWorkshop.arduinoCLI.userDirectory": "C:\\Users\\ACER\\Documents\\Arduino"
 }
+
