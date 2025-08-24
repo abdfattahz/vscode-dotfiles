@@ -2,3 +2,5 @@
 globalStorage/
 workspaceStorage/
 logs/
+history/
+sync/
