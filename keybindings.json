@@ -231,6 +231,12 @@
   // 📁 FILE EXPLORER
   // =================
 
+  // Name: Open new folder (Explorer)
+  {
+    "key": "ctrl+alt+o",
+    "command": "workbench.action.files.openFolder"
+  },
+
   // Name: Rename (Explorer)
   {
     "key": "r",
