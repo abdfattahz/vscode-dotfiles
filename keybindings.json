@@ -227,6 +227,13 @@
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
 
+  // Show Hover
+  {
+  "key": "shift+k",
+  "command": "editor.action.showHover",
+  "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+
   // =================
   // 📁 FILE EXPLORER
   // =================

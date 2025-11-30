@@ -130,6 +130,8 @@
   // ============
   // 🧪 Arduino
   // ============
-  "arduinoMakerWorkshop.arduinoCLI.userDirectory": "C:\\Users\\ACER\\Documents\\Arduino"
+  "arduinoMakerWorkshop.arduinoCLI.userDirectory": "C:\\Users\\ACER\\Documents\\Arduino",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "code-runner.saveFileBeforeRun": true
 }
 
