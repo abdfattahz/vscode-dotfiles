@@ -1,137 +1,128 @@
 {
-  // ================================ 
-  // 🧰 C/C++ toolchain & formatters
-  // ================================
-  "C_Cpp.default.compilerPath": "C:/mingw64/bin/gcc.exe",
-  "C_Cpp.formatting": "clangFormat",
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
-
-  // ============================
-  // 🖋️ Editor look & formatting
-  // ============================
-  "editor.fontFamily": "RobotoMono Nerd Font Mono",
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-  // Per-language default formatters (Prettier / Black / C++)
-  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[php]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[python]": { "editor.defaultFormatter": "ms-python.black-formatter" },
-  "black-formatter.args": ["--line-length", "88"],
-  "[c]": { "editor.defaultFormatter": "ms-vscode.cpptools" },
-  "[cpp]": { "editor.defaultFormatter": "ms-vscode.cpptools" },
-
-  // Whitespace / line numbers
-  "editor.renderWhitespace": "all",
-  "editor.lineNumbers": "relative",
-
-  // ==================
-  // 🧩 Themes & icons
-  // ==================
-  "material-icon-theme.folders.theme": "classic",
+  // --- Core / UI ---
+  "editor.fontFamily": "'RobotoMono Nerd Font Mono'",
   "workbench.iconTheme": "material-icon-theme",
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.tree.indent": 8,
+  "workbench.tree.renderIndentGuides": "none",
+  "explorer.decorations.badges": false,
+  "explorer.decorations.colors": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.activityBar.location": "hidden",
 
-  // =========================
-  // 🪟 Workbench chrome (UI)
-  // =========================
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "workbench.navigationControl.enabled": false,
-  "window.commandCenter": false,
-  "window.menuBarVisibility": "compact",
+  // --- Editor behavior ---
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": false,
+  "editor.cursorBlinking": "solid",
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.hover.enabled": true,
+  "editor.lightbulb.enabled": "on",
+  "editor.quickSuggestions": { "comments": "on", "strings": "on", "other": "on" },
+  "editor.parameterHints.enabled": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.codeLens": true,
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": true,
+  "editor.guides.bracketPairs": true,
+  "editor.linkedEditing": true,
 
-  // NOTE: This setting is experimental/obscure; comment if noisy
-  // "workbench.view.showQuietly": { "workbench.panel.output": false }, // May not exist in all builds
+  // --- Neovim bridge (Use WSL Ubuntu Neovim) ---
+  "extensions.experimental.affinity": { "asvetliakov.vscode-neovim": 1 },
 
-  // =====================
-  // 🖥️ Terminal profiles
-  // =====================
-  // Old cross-OS profile bucket (can conflict on Windows). Use the Windows-scoped section below.
-  // "terminal.integrated.profiles": {
-  //   "MSYS2 MinGW64": {
-  //     "path": "C:\\msys64\\mingw64.exe"
-  //   }
-  // },
+  // Tell VSCode-Neovim to run inside WSL
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
 
-  "terminal.integrated.defaultProfile.windows": "UbuntuVM (WSL)",
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "UbuntuVM (WSL)": {
-      "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": ["-d", "UbuntuVM"]
-    }
+  // Use the same VSCode-specific config directory as Ubuntu
+  // (~/.config/nvim-vscode)
+  "vscode-neovim.NVIM_APPNAME": "nvim-vscode",
+
+  // Key handling
+  "vscode-neovim.useCtrlKeys": true,
+  "vscode-neovim.handleKeys": {
+    "<C-z>": false,
+    "<C-S-z>": false,
+    "<C-y>": false,
+    "<C-v>": true
   },
 
-  // Convenience zoom
-  "editor.mouseWheelZoom": true,
+  // Required for accurate <C-...> mapping on Windows
+  "keyboard.dispatch": "keyCode",
 
-  // ============================
-  // 🐘 PHP (validator/debugger)
-  // ============================
-  "php.validate.executablePath": "C:/xampp/php/php.exe",
-  // NOTE: Some PHP debug extensions don't use this setting; safe to keep, but remove if warned by your debugger.
-  "php.debug.executablePath": "C:/xampp/php/php.exe",
+  // --- Git ---
+  "git.enabled": true,
+  "git.autorefresh": false,
+  "git.decorations.enabled": false,
 
-  // ====================
-  // 🔐 Security / Trust
-  // ====================
-  "security.allowedUNCHosts": ["wsl.localhost"],
-  "security.workspace.trust.untrustedFiles": "open",
+  // --- File watching / search ---
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/out/**": true,
+    "**/target/**": true,
+    "**/.venv/**": true,
+    "**/__pycache__/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/out": true,
+    "**/target": true,
+    "**/.venv": true,
+    "**/__pycache__": true
+  },
+  "search.followSymlinks": false,
 
-  // =============================
-  // ✍️ Spellchecker custom words
-  // =============================
-  "cSpell.userWords": [
-    "COMPA",
-    "SWUART",
-    "TCCR",
-    "TIFR",
-    "TIMSK",
-    "USART",
-    "vect"
-  ],
+  // --- Updates / telemetry ---
+  "telemetry.telemetryLevel": "off",
+  "update.mode": "none",
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
 
-  // =================
-  // 🤖 AI assistants
-  // =================
-  "continue.enableTabAutocomplete": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
+  // --- Terminal ---
+  "terminal.integrated.enableImages": true,
+  "accessibility.signals.terminalBell": { "sound": "off" },
+  "terminal.integrated.enableVisualBell": false,
+  "terminal.integrated.sendKeybindingsToShell": true,
 
-  // ======================
-  // ⚙️ VSCodeVim / Neovim
-  // ======================
-  "vim.enableNeovim": true,
-  // Use the full path to the executable (not the folder)
-  "vim.neovimPath": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
-  "vim.surround": true,
-  "vim.useSystemClipboard": true,
-  // Exit insert with 'kj' then move right once (your custom insert-mode mapping)
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["k", "j"],
-      "after": ["<Esc>", "l"]
-    }
-  ],
+  // --- Editing niceties ---
+  "makefile.configureOnOpen": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.inlayHints.enabled": "offUnlessPressed",
 
-  // ============
-  // 🧪 Arduino
-  // ============
-  "arduinoMakerWorkshop.arduinoCLI.userDirectory": "C:\\Users\\ACER\\Documents\\Arduino",
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "code-runner.saveFileBeforeRun": true
+  // --- C++ / clangd --- (disabled because paths differ on Windows)
+  // "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.codeAnalysis.enabled": false,
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.formatting": "disabled",
+  "C_Cpp.autocomplete": "disabled",
+
+  // If you want clangd from WSL, uncomment this:
+  // "clangd.path": "/usr/bin/clangd",
+  // "clangd.arguments": [
+  //   "--background-index",
+  //   "--clang-tidy",
+  //   "--header-insertion=never"
+  // ],
+
+  // --- CMake integration ---
+  "cmake.configureOnOpen": false,
+
+  // --- VSCode UX Cleanup ---
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "window.commandCenter": false
 }
-

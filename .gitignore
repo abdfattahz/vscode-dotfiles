@@ -22,3 +22,4 @@ commandHistory.json
 !tasks.json
 !launch.json
 !snippets/**
+!mcp.json
